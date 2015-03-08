@@ -1,0 +1,30 @@
+---
+title: "project Activity"
+author: "cuissai"
+date: "Friday, March 06, 2015"
+output: html_document
+---
+
+<https://link>              
+[Download R](http://www.r-project.org)    
+I spend so much time reading  [R bloggers]( http://www.r-bloggers.com/)  and  [Simply Statistics](http://simplystatistics.org/) !   
+
+
+```test```
+
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+```{r,tidy=FALSE}
+library(stats)
+fit<-lm(Ozone~Wind+Solar.R+Temp,data=airquality)
+summary(fit)
+```
+
+```{r, echo=TRUE,results='asis'}
+pairs(airquality)
+```
